@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+
+  //media queries
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12px
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; //1rem = 9px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1rem = 8px
+  }
+
+  // @include respond(phone) {
+  //   font-size: 43.75%; //1rem = 7px
+  // }
+}
+
+body {
+  padding: 3rem;
+
+  //media queries
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+::-moz-selection {
+  background: $color-primary;
+  color: $color-white;
+}
+
+::selection {
+  background: $color-primary;
+  color: $color-white;
+}
+
+//media queries
+@include respond(tab-port) {
+}

@@ -1,0 +1,79 @@
+.footer {
+  padding: 10rem;
+  background-color: $color-dark-grey3;
+
+  //media queries
+  @include respond(phone) {
+    padding: 5rem 3rem;
+  }
+
+  &__logo {
+    width: 15rem;
+    height: auto;
+    display: inline-block;
+  }
+
+  &__text {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1.4rem;
+    color: $color-white;
+
+    //media queries
+    @include respond(tab-land) {
+      column-gap: 12rem;
+      grid-template-columns: 1fr;
+      row-gap: 5rem;
+    }
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      row-gap: 5rem;
+    }
+  }
+
+  &__text-box {
+    width: 90%;
+    padding-top: 1.5rem;
+    border-top: 1px solid $color-dark-grey;
+  }
+
+  &__nav {
+    padding-top: 1.5rem;
+    border-top: 1px solid $color-dark-grey;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+    //media queries
+    @include respond(tab-land) {
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1.3rem;
+    }
+  }
+
+  &__nav-link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $color-grey-light1;
+      background-color: $color-dark-grey3;
+      padding: 2px 0;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:active {
+      transform: rotate(5deg) scale(1.2);
+      color: $color-primary;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+    }
+  }
+}

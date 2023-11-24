@@ -1,0 +1,129 @@
+.section-about {
+  background-color: $color-grey-light1;
+  padding: 25rem 0;
+  margin-top: -25vh;
+
+  //media queries
+  @include respond(tab-land) {
+    padding: 25vh 0;
+  }
+
+  // //media queries
+  // @include respond(tab-land) {
+  //   padding: 35rem 0;
+  // }
+
+  @include respond(phone) {
+    padding-bottom: 45rem;
+  }
+}
+
+.section-features {
+  padding: 20rem 0;
+  margin-top: -10rem;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/nat-4.jpg);
+  background-size: cover;
+  background-position: top;
+  // clip-path: polygon(0 25vh, 100% 0, 100% 75vh, 0 100%);
+  transform: skewY(-7deg);
+
+  & > * {
+    transform: skewY(7deg);
+  }
+
+  //media queries
+  @include respond(tab-port) {
+    padding: 15rem 0;
+  }
+}
+
+.feature-box {
+  padding: 2rem;
+  background-color: rgba($color-white, 0.8);
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  transition: all 0.3s;
+
+  //media queries
+  @include respond(tab-port) {
+    width: 90%;
+  }
+
+  @include respond(phone) {
+    width: 85%;
+  }
+
+  &:hover {
+    transform: scale(1.03) translateY(-1.5rem);
+  }
+
+  &__icon {
+    color: transparent;
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  &__text {
+    //media queries
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.section-tours {
+  background-color: $color-grey-light1;
+  padding: 25rem 0 15rem 0;
+  margin-top: -10rem;
+
+  //media queries
+  @include respond(tab-port) {
+    padding: 20rem 0 10rem 0;
+  }
+}
+
+.tour_box {
+  //media queries
+  @include respond(phone) {
+    justify-items: center;
+  }
+}
+
+.section-stories {
+  padding: 15rem 0;
+  position: relative;
+
+  //media queries
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+}
+
+.section-booking {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+
+  //media queries
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+}
